@@ -150,6 +150,11 @@ function showCattle(){
 
     let cattleList = document.getElementById("cattleList");
 
+    // FIX
+    if(cattleList == null){
+        return;
+    }
+
     cattleList.innerHTML = "";
 
     let cattleArray =
@@ -218,10 +223,16 @@ if(addExpenseBtn){
             date: date
         });
 
-        localStorage.setItem("expenses",
-        JSON.stringify(expenseArray));
+        localStorage.setItem(
+            "expenses",
+            JSON.stringify(expenseArray)
+        );
 
-        alert("Expense Added!");
+        alert("Expense Added Successfully!");
+
+        document.getElementById("expenseItem").value = "";
+        document.getElementById("expenseAmount").value = "";
+        document.getElementById("expenseDate").value = "";
 
         showExpenses();
     });
@@ -234,6 +245,10 @@ function showExpenses(){
     let expenseList =
     document.getElementById("expenseList");
 
+    if(expenseList == null){
+        return;
+    }
+
     expenseList.innerHTML = "";
 
     let expenseArray =
@@ -243,6 +258,7 @@ function showExpenses(){
 
         expenseList.innerHTML += `
         <tr>
+
             <td>${expenseArray[i].item}</td>
 
             <td>${expenseArray[i].amount}</td>
@@ -254,6 +270,7 @@ function showExpenses(){
                     Delete
                 </button>
             </td>
+
         </tr>
         `;
     }
@@ -266,13 +283,13 @@ function deleteExpense(index){
 
     expenseArray.splice(index, 1);
 
-    localStorage.setItem("expenses",
-    JSON.stringify(expenseArray));
+    localStorage.setItem(
+        "expenses",
+        JSON.stringify(expenseArray)
+    );
 
     showExpenses();
 }
-
-
 
 //Feature 9: Income
 let addIncomeBtn =
@@ -320,6 +337,10 @@ function showIncome(){
 
     let incomeList =
     document.getElementById("incomeList");
+
+    if(incomeList == null){
+        return;
+    }
 
     incomeList.innerHTML = "";
 
