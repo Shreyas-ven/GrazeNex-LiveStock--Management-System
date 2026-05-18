@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Productivity Portal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Daily Notes</h1>
+            <p>Manage your Daily Notes Here! </p>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="reports.html">Tasks</a>
+            <a href="signup.html"id="signupLink">Sign Up</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <a href="#" id="logoutBtn">Logout</a>
+            
+        </nav>
+        <section class = "register-section">
+            <div class="button-container">
+
+            <br><br>
+            <h1>Cattle Storage</h1>
+
+    <input type="text" id="cattleName" placeholder="Enter Cattle Name">
+
+    <select id="breed">
+        <option value="Cow">Cow</option>
+        <option value="Goat">Goat</option>
+        <option value="Sheep">Sheep</option>
+        <option value="Ox">Ox</option>
+    </select>
+
+    <button id="addCattleBtn">
+        Add Cattle
+    </button>
+
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="cattleList">
+
+        </tbody>
+
+    </table>
+        </section>
+
+        <br><br><br><br><br><br><br><br><br>
+        <footer>
+        <p>&copy; 2026 Student Productivity Portal | All Rights Reserved</p>
+        <p>Email: support@studentportal.com | Phone: +91 80733 18562</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

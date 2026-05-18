@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Productivity Portal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Daily Notes</h1>
+            <p>Manage your Daily Notes Here! </p>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="reports.html">Tasks</a>
+            <a href="signup.html"id="signupLink">Sign Up</a>
+            <a href="login.html" id="loginLink">Login</a>
+            <a href="#" id="logoutBtn">Logout</a>
+            
+        </nav>
+        <section class = "register-section">
+            <div class="button-container">
+
+            <br><br>
+            <h1>Expenditure Management</h1>
+
+    <h1>Profit / Income</h1>
+
+    <input type="text" id="incomeSource"
+    placeholder="Income Source">
+
+    <input type="number" id="incomeAmount"
+    placeholder="Amount">
+
+    <input type="date" id="incomeDate">
+
+    <button id="addIncomeBtn">
+        Add Income
+    </button>
+
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>Source</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="incomeList">
+
+        </tbody>
+
+    </table>
+
+        </section>
+
+        <br><br><br><br><br><br><br><br><br>
+        <footer>
+        <p>&copy; 2026 Student Productivity Portal | All Rights Reserved</p>
+        <p>Email: support@studentportal.com | Phone: +91 80733 18562</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
