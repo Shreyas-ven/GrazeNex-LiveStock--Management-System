@@ -29,6 +29,10 @@ nav a{
     transition: all 0.3s ease;
 }
 
+#form-head{
+    color: rgb(137, 0, 0);
+}
+
 nav a:hover{
     color: rgb(137, 0, 0);
     text-decoration: none;
@@ -170,6 +174,16 @@ th{
 td{
     text-align: center;
     padding: 5px;
+}
+
+.register-form input,
+.register-form select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+    font-size:15px;
 }
 
 @media(max-width:350px){
