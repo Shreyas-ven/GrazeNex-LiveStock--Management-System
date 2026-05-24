@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 public class DBConnection {
 	public static Connection getConnection() {
 		Connection con = null;
-		String url = "jdbc:mysql://localhost:3306/student_portal";
+		String url = "jdbc:mysql://localhost:3306/GrazeNex";
 		String user = "root";
 		String password = "Shreyas@7154";
 		try {
