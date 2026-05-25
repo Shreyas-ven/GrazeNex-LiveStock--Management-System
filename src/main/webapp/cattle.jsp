@@ -10,10 +10,10 @@
             <p id = "slogan">Intelligent Livestock Management System</p>
         </header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="reports.html">Reports</a>
-            <a href="expense.html">Expense</a>
-            <a href="income.html">Income</a>
+            <a href="index.jsp">Home</a>
+            <a href="reports.jsp">Reports</a>
+            <a href="expense.jsp">Expense</a>
+            <a href="income.jsp">Income</a>
             <a href="#" id="logoutBtn">Logout</a>
             
         </nav><br><br>

@@ -13,10 +13,10 @@
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-            <a href="reports.html">Tasks</a>
-            <a href="cattle.html">Cattle</a>
-            <a href="income.html">Income</a>
+        <a href="index.jsp">Home</a>
+            <a href="reports.jsp">Tasks</a>
+            <a href="cattle.jsp">Cattle</a>
+            <a href="income.jsp">Income</a>
             <a href="#" id="logoutBtn">Logout</a>
     </nav><br><br><br>
 

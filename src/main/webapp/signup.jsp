@@ -12,10 +12,10 @@
             <p id = "slogan">Register Here!</p>
     </header>
     <nav>
-            <a href="index.html">Home</a>
-            <a href="reports.html">Reports</a>
-            <a href="signup.html"id="signupLink">Sign Up</a>
-            <a href="login.html" id="loginLink">Login</a>
+            <a href="index.jsp">Home</a>
+            <a href="reports.jsp">Reports</a>
+            <a href="signup.jsp"id="signupLink">Sign Up</a>
+            <a href="login.jsp" id="loginLink">Login</a>
         </nav><br><br>
         <section class="register-section">
             <form class="register-form"  action="signup" method="post">

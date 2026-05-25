@@ -10,10 +10,10 @@
             <p>Manage your income here! </p>
         </header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="reports.html">Reports</a>
-            <a href="cattle.html">Cattle</a>
-            <a href="expense.html">Expense</a>
+            <a href="index.jsp">Home</a>
+            <a href="reports.jsp">Reports</a>
+            <a href="cattle.jsp">Cattle</a>
+            <a href="expense.jsp">Expense</a>
             <a href="#" id="logoutBtn">Logout</a>
             
         </nav><br><br>
