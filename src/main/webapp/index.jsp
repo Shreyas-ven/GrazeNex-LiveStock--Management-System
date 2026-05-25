@@ -14,7 +14,7 @@
 
     <nav>
         <a href="index.jsp">Home</a>
-        <a href="reports.jsp]">Reports</a>
+        <a href="reports.jsp">Reports</a>
         <a href="signup.jsp" id="signupLink">Sign Up</a>
         <a href="login.jsp" id="loginLink">Login</a>
         <a href="#" id="logoutBtn">Logout</a>
