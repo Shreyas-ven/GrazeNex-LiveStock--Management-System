@@ -21,19 +21,19 @@
             <div class="button-container">
 
             <br><br>
-        <a href="cattle.html">
+        <a href="cattle.jsp">
             <button class="big-btn">
                 Cattle Storage
             </button>
         </a><br><br>
 
-        <a href="expense.html">
+        <a href="expense.jsp">
             <button class="big-btn">
                 Expenditure
             </button>
         </a><br><br>
 
-        <a href="income.html">
+        <a href="income.jsp">
             <button class="big-btn">
                 Profit / Income
             </button>

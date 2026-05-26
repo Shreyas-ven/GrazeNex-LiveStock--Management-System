@@ -1,18 +1,28 @@
 package model;
 
 public class Cattle {
+
     private int id;
+
     private int user_id;
+
     private String cattleName;
+
+    private String breed;
 
     public Cattle() {
 
     }
 
-    public Cattle(int id, int user_id, String cattleName) {
+    public Cattle(int id,
+                  int user_id,
+                  String cattleName,
+                  String breed) {
+
         this.id = id;
         this.user_id = user_id;
         this.cattleName = cattleName;
+        this.breed = breed;
     }
 
     public int getId() {
@@ -37,5 +47,13 @@ public class Cattle {
 
     public void setCattleName(String cattleName) {
         this.cattleName = cattleName;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
 }

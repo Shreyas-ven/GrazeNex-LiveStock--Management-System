@@ -1,63 +1,177 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%
+    Integer userId = (Integer) session.getAttribute("userId");
+
+    if(userId == null){
+
+        response.sendRedirect("login.jsp");
+
+        return;
+    }
+%>
+
+<%@ page import="java.util.List" %>
+<%@ page import="dao.IncomeDAO" %>
+<%@ page import="model.Income" %>
+
+<%
+    IncomeDAO dao = new IncomeDAO();
+
+    List<Income> incomeList =
+    dao.getIncomeByUserId(userId);
+
+    String userName =
+    (String) session.getAttribute("userName");
+%>
+
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>GrazeNex</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h1>GrazeNex</h1>
-            <p>Manage your income here! </p>
-        </header>
-        <nav>
-            <a href="index.jsp">Home</a>
-            <a href="reports.jsp">Reports</a>
-            <a href="cattle.jsp">Cattle</a>
-            <a href="expense.jsp">Expense</a>
-            <a href="#" id="logoutBtn">Logout</a>
-            
-        </nav><br><br>
-        <section class = "register-section">
-            <div class="register-form">
+<head>
+    <meta charset="UTF-8">
+    <title>GrazeNex Income</title>
+    <link rel="stylesheet" href="style.css">
 
-    <h2 id="form-head">Profit / Income</h2>
+</head>
 
-    <input type="text" id="incomeSource"
-    placeholder="Income Source">
+<body>
 
-    <input type="number" id="incomeAmount"
-    placeholder="Amount">
+    <header>
 
-    <input type="date" id="incomeDate">
+        <h1>GrazeNex</h1>
 
-    <button id="addIncomeBtn">
-        Add Income
-    </button>
+        <p>Manage your income here!</p>
 
-    <table border="1">
+    </header>
 
-        <thead>
-            <tr>
-                <th>Source</th>
-                <th>Amount</th>
-                <th>Date</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+    <nav>
 
-        <tbody id="incomeList">
+        <a href="index.jsp">Home</a>
 
-        </tbody>
+        <a href="cattle.jsp">Cattle</a>
 
-    </table>
+        <a href="reports.jsp">Reports</a>
 
-        </section>
+        <a href="expense.jsp">Expense</a>
 
-        <br><br><br><br><br><br><br><br><br>
-        <footer>
-        <p>&copy; 2026 Student Productivity Portal | All Rights Reserved</p>
-        <p>Email: support@studentportal.com | Phone: +91 80733 18562</p>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+        <a href="income.jsp">Income</a>
+
+        <a href="logout">Logout</a>
+
+    </nav>
+
+    <section class="register-section">
+
+        <div class="register-form">
+
+            <h2 id="form-head">
+
+                Profit / Income
+
+            </h2>
+
+            <form action="addIncome"
+                  method="post">
+
+                <div class="input-group">
+
+                    <label>Income Source</label>
+
+                    <input type="text"
+                           name="incomeSource"
+                           placeholder="Income Source"
+                           required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Amount</label>
+
+                    <input type="number"
+                           name="amount"
+                           placeholder="Amount"
+                           required>
+
+                </div>
+
+                <button type="submit">
+
+                    Add Income
+
+                </button>
+
+            </form>
+
+            <br><br>
+
+            <table border="1">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Source</th>
+
+                        <th>Amount</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                <% for(Income income : incomeList){ %>
+
+                    <tr>
+
+                        <td>
+
+                            <%= income.getIncomeSource() %>
+
+                        </td>
+
+                        <td>
+
+                            ₹ <%= income.getAmount() %>
+
+                        </td>
+
+                        <td>
+
+                            <a href="deleteIncome?id=<%= income.getId() %>">
+
+                                Delete
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                <% } %>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>&copy; 2026 GrazeNex | All Rights Reserved</p>
+
+        <p>Email: support@grazenex.com | Phone: +91 80733 18562</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
