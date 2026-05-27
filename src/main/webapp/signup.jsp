@@ -38,8 +38,6 @@
 
         <a href="index.jsp">Home</a>
 
-        <a href="animals.jsp">Livestock</a>
-
         <a href="reports.jsp">Reports</a>
 
         <% if(userName == null){ %>
@@ -55,15 +53,14 @@
         <% } %>
 
     </nav>
-
+<br><br>
     <section class="register-section">
 
         <form class="register-form"
               action="signup"
               method="post">
 
-            <h2>User Registration</h2>
-
+            
             <% if(successMessage != null){ %>
 
                 <p style="color:green;">
@@ -121,16 +118,6 @@
                 Register
 
             </button>
-
-            <p class="extra-link">
-
-                Already have an account?
-
-                <a href="login.jsp">
-                    Login Here
-                </a>
-
-            </p>
 
         </form>
 

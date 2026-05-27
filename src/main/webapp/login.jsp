@@ -34,31 +34,20 @@
     <nav>
 
         <a href="index.jsp">Home</a>
-
-        <a href="animals.jsp">Livestock</a>
-
+        
         <a href="reports.jsp">Reports</a>
-
         <% if(userName == null){ %>
-
             <a href="signup.jsp" id="signupLink">Sign Up</a>
-
             <a href="login.jsp" id="loginLink">Login</a>
 
         <% } else { %>
-
             <a href="logout">Logout</a>
-
         <% } %>
 
-    </nav>
-
+    </nav><br><br>
     <section class="register-section">
 
         <form class="register-form" action="login" method="post">
-
-            <h2>User Login</h2>
-
             <% if(errorMessage != null){ %>
 
                 <p style="color:red;">
@@ -76,9 +65,7 @@
                        name="email"
                        placeholder="Enter your email"
                        required>
-
             </div>
-
             <div class="input-group">
 
                 <label>Password</label>
@@ -88,23 +75,10 @@
                        name="pass"
                        placeholder="Enter your password"
                        required>
-
             </div>
-
             <button type="submit">
                 Login
             </button>
-
-            <p class="extra-link">
-
-                Don't have an account?
-
-                <a href="signup.jsp">
-                    Register Here
-                </a>
-
-            </p>
-
         </form>
 
     </section>
