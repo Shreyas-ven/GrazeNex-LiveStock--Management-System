@@ -28,7 +28,7 @@
 
         <% } else { %>
 
-            <a href="addAnimal.jsp">Lost Animals</a>
+            <a href="addAnimals.jsp">Lost Animals</a>
 
             <a href="logout">Logout</a>
 

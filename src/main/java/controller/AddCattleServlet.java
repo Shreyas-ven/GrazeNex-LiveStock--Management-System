@@ -23,36 +23,24 @@ public class AddCattleServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response)
                           throws IOException {
-
         String cattleName =
         request.getParameter("cattleName");
-
         String breed =
         request.getParameter("breed");
-
         HttpSession session =
         request.getSession();
-
-        int userId =
-        (int) session.getAttribute("userId");
-
+        int userId =(int) session.getAttribute("userId");
+        
         Cattle cattle = new Cattle();
-
         cattle.setUserId(userId);
-
         cattle.setCattleName(cattleName);
-
         cattle.setBreed(breed);
-
+        
         CattleDAO dao = new CattleDAO();
-
-        boolean status =
-        dao.addCattle(cattle);
+        boolean status = dao.addCattle(cattle);
 
         if(status) {
-
             response.sendRedirect("cattle.jsp");
-
         } else {
 
             response.getWriter()

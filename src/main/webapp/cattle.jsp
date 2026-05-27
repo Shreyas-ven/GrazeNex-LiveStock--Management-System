@@ -36,7 +36,6 @@
     <nav>
 
         <a href="index.jsp">Home</a>
-        <a href="cattle.jsp">Livestock</a>
         <a href="reports.jsp">Reports</a>
         <a href="expense.jsp">Expense</a>
         <a href="income.jsp">Income</a>

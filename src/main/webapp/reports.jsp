@@ -1,3 +1,13 @@
+<%@ page language="java"
+contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+
+<%
+    String userName =
+    (String) session.getAttribute("userName");
+%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,14 +19,25 @@
             <h1>GrazeNex</h1>
             <p>Manage your Daily Notes Here! </p>
         </header>
-        <nav>
-            <a href="index.jsp">Home</a>
-            <a href="reports.jsp">Reports</a>
-            <a href="signup.jsp"id="signupLink">Sign Up</a>
+            <nav>
+        <a href="index.jsp">Home</a>
+        <a href="reports.jsp">Reports</a>
+
+        <% if(userName == null){ %>
+
+            <a href="signup.jsp" id="signupLink">Sign Up</a>
+
             <a href="login.jsp" id="loginLink">Login</a>
-            <a href="#" id="logoutBtn">Logout</a>
-            
-        </nav>
+
+        <% } else { %>
+
+            <a href="addAnimals.jsp">Lost Animals</a>
+
+            <a href="logout">Logout</a>
+
+        <% } %>
+
+    </nav>
         <section class = "register-section">
             <div class="button-container">
 
