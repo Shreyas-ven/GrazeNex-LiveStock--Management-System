@@ -46,20 +46,15 @@
     </header>
 
     <nav>
-
         <a href="index.jsp">Home</a>
-
         <a href="cattle.jsp">Cattle</a>
-
         <a href="reports.jsp">Reports</a>
-
         <a href="expense.jsp">Expense</a>
-
         <a href="income.jsp">Income</a>
-
         <a href="logout">Logout</a>
 
     </nav>
+    <br>
 
     <section class="register-section">
 
