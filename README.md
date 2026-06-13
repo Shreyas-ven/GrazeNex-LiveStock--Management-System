@@ -229,7 +229,7 @@ Project: GrazeNex - Intelligent Livestock Management System
 
 Developer: Shreyas V
 
-Email: support@grazenex.com
+Email: shreyasvbangera@gmail.com
 
 ---
 
