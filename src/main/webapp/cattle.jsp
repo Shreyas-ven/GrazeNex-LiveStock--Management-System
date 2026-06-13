@@ -40,7 +40,7 @@
         <a href="expense.jsp">Expense</a>
         <a href="income.jsp">Income</a>
         <a href="logout">Logout</a>
-    </nav>
+    </nav><br>
 
     <section class="register-section">
         <div class="register-form">

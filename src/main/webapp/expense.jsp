@@ -40,7 +40,7 @@
 
 </head>
 
-<body>
+<body><br>
 
     <header>
 
@@ -64,7 +64,7 @@
 
         <a href="logout">Logout</a>
 
-    </nav>
+    </nav><br>
 
     <section class="register-section">
 
